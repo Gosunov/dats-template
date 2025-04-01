@@ -39,21 +39,36 @@ int main(int argc, const char** argv) {
     Strategy strategy;
     for (int tick = 0; tick < 10; ++tick) {
         spdlog::info("Tick: {}", tick);
-        World world;
+        spdlog::info("Getting state from API");
+
+        World world;        
         try {
-            spdlog::info("Getting state from API");
             WorldResponse r = api->get_world();
             world = r.world;
         } catch (const std::exception& err) {
             spdlog::error(err.what());
             exit(1);
         }
+        nlohmann::json j = world;
+
+        std::ofstream outputFile("example.txt");
+
+        if (!outputFile) {
+            std::cerr << "Error opening file for writing!" << std::endl;
+            return 1;  // Return an error code if the file cannot be opened
+        }
+        outputFile << j.dump(2);
 
         spdlog::info("Strategy calculating response");
         Command command = strategy.get_command(world);
 
         spdlog::info("Sendind response to API");
-        api->send_command(command);
+        try {
+            api->send_command(command);
+        } catch (const std::exception& err) {
+            spdlog::error(err.what());
+            exit(1);
+        }
     }
     return 0;
 }
