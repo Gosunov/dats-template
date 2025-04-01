@@ -16,15 +16,15 @@ LocalAPI::LocalAPI() {
                 .size = {10, 5}
             }
         },
-        .pad = { 
-            .position = {0, 0}, 
-            .size = {10, 2}
-        },
         .ball = { 
             .position = {1, 1},
             .radius = 3, 
             .speed = {5, 5}
-        }
+        },
+        .pad = { 
+            .position = {0, 0}, 
+            .size = {10, 2}
+        },
     };
 }
 
