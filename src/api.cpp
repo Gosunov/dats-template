@@ -18,8 +18,8 @@ LocalAPI::LocalAPI() {
         },
         .ball = { 
             .position = {1, 1},
+            .speed = {5, 5},
             .radius = 3, 
-            .speed = {5, 5}
         },
         .pad = { 
             .position = {0, 0}, 
