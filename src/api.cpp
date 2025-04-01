@@ -113,7 +113,8 @@ json ServerAPI::post(const std::string& endpoint, const json& payload) {
 }
 
 WorldResponse ServerAPI::get_world() {
-    return get("/api/world");
+    World w = get("/api/world");
+    return WorldResponse{w};
 }
 
 CommandResponse ServerAPI::send_command(const Command& c) {
