@@ -41,7 +41,7 @@ int main(int argc, const char** argv) {
         spdlog::info("Tick: {}", tick);
         spdlog::info("Getting state from API");
 
-        World world;        
+        World world;
         try {
             WorldResponse r = api->get_world();
             world = r.world;
@@ -49,15 +49,6 @@ int main(int argc, const char** argv) {
             spdlog::error(err.what());
             exit(1);
         }
-        nlohmann::json j = world;
-
-        std::ofstream outputFile("example.txt");
-
-        if (!outputFile) {
-            std::cerr << "Error opening file for writing!" << std::endl;
-            return 1;  // Return an error code if the file cannot be opened
-        }
-        outputFile << j.dump(2);
 
         spdlog::info("Strategy calculating response");
         Command command = strategy.get_command(world);

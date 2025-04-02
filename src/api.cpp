@@ -4,6 +4,7 @@
 #include <spdlog/sinks/basic_file_sink.h>
 
 #include "api.h"
+#include "spdlog/sinks/rotating_file_sink.h"
 
 using json = nlohmann::json;
 using namespace std;
@@ -72,7 +73,9 @@ CommandResponse LocalAPI::send_command(const Command& c) {
 }
 
 ServerAPI::ServerAPI(const string& host, const string& token) : host(host), token(token) {
-    logger = spdlog::basic_logger_mt("requests", "logs/requests.txt");
+    int max_size = 1048576 * 5;
+    int max_files = 3;
+    logger = spdlog::rotating_logger_mt("requests", "logs/requests.txt", max_size, max_files);
 }
 
 json ServerAPI::get(const std::string& endpoint) {
@@ -118,5 +121,5 @@ WorldResponse ServerAPI::get_world() {
 }
 
 CommandResponse ServerAPI::send_command(const Command& c) {
-    return post("/api/command", c);
+    return get("/api/command");
 }

@@ -41,7 +41,7 @@ struct WorldResponse {
 struct CommandResponse {};
 
 
-NLOHMANN_JSON_SERIALIZE_ENUM(Command, {
+NLOHMANN_JSON_SERIALIZE_ENUM(Direction, {
     {Direction::Left, "left"},
     {Direction::Right, "right"},
 })
