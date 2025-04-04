@@ -1,0 +1,18 @@
+arguments: ./rewind/rewind-viewer
+Current dir: /Users/alex/projects/datscity
+File verbosity level: 0
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2025-04-04 09:51:18.571 (   0.000s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'rewind-viewer.log', mode: 'w', verbosity: 0
+2025-04-04 09:51:18.571 (   0.000s) [main thread     ]               main.cpp:83    INFO| Load configuration from rewind-viewer.yaml
+2025-04-04 09:51:18.571 (   0.000s) [main thread     ]               main.cpp:88    WARN| Configuration file rewind-viewer.yaml does not exist
+2025-04-04 09:51:18.571 (   0.000s) [main thread     ]               main.cpp:92    INFO| Initialize GLFW
+2025-04-04 09:51:18.677 (   0.106s) [main thread     ]               main.cpp:98    INFO| Create main window
+2025-04-04 09:51:18.728 (   0.158s) [main thread     ]               main.cpp:61    INFO| Enable vsync
+2025-04-04 09:51:18.728 (   0.158s) [main thread     ]               main.cpp:64    INFO| Setup Dear ImGui context
+2025-04-04 09:51:18.728 (   0.158s) [main thread     ]               main.cpp:68    INFO| Setup Platform/Renderer backends
+2025-04-04 09:51:18.731 (   0.161s) [main thread     ]               main.cpp:105   INFO| Load OpenGL functions
+2025-04-04 09:51:18.749 (   0.178s) [main thread     ]               main.cpp:111   INFO| OpenGL 4.1 Metal - 89.3, GLSL 4.10
+2025-04-04 09:51:18.749 (   0.178s) [main thread     ]               main.cpp:112   INFO| Driver Apple, Renderer Apple M1 Pro
+2025-04-04 09:51:18.749 (   0.178s) [main thread     ]             shader.cpp:90    INFO| Start compiling shader : vertex=resources/shaders/color_pass_projection.vert, fragment=resources/shaders/color_pass.frag
+2025-04-04 09:51:18.749 (   0.179s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
+2025-04-04 09:51:18.749 (   0.179s) [main thread     ]                       :0     FATL| Signal: SIGABRT
