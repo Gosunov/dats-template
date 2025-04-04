@@ -5,7 +5,7 @@ ui:
   close_with_esc: 0
   update_unfocused: 0
   buffered_mode: 1
-  replay_fps: 240
+  replay_fps: 12
   canvas_background_color:
     - 0.2
     - 0.3
@@ -31,9 +31,9 @@ scene:
     - 0.856
     - 0.882
     - 1
-  show_grid: 1
+  show_grid: 0
   show_background: 1
-  show_game_coordinates: 0
+  show_game_coordinates: 1
   textures_dir: resources/textures/
   shaders_dir: resources/shaders/
   camera:

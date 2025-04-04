@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "Build",
             "type": "shell",
             "command": "cmake --build build",
             "problemMatcher": [],
@@ -14,14 +14,36 @@
             }
         },
         {
-            "label": "Mock API",
+            "label": "Build & Run client on Mock Server",
             "type": "shell",
-            "command": "./client --local",
+            "command": "./client --local --save-replay",
+            "dependsOn": ["Build"]
         },
         {
-            "label": "Server API",
+            "label": "Build & Run client on Test Server",
             "type": "shell",
             "command": "./client --server gosunov.ru --token 123",
+            "dependsOn": ["Build"]
+        },
+        {
+            "label": "Build & Run client on Main Server",
+            "type": "shell",
+            "command": "./client --server gosunov.ru --token 123",
+            "dependsOn": ["Build"]
+        },
+        {
+            "label": "Replay last game",
+            "type": "shell",
+            "command": "./replayer replays/replay.last",
+            "dependsOn": ["Build"]
+        },
+        {
+            "label": "Run rewind-viewer",
+            "type": "shell",
+            "command": "./rewind-viewer",
+            "options": {
+                "cwd": "${workspaceFolder}/rewind"
+            }
         }
     ]
 }

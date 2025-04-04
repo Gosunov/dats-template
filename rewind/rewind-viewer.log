@@ -2,92 +2,60 @@ arguments: ./rewind-viewer
 Current dir: /Users/alex/projects/datscity/rewind
 File verbosity level: 0
 date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
-2025-04-04 09:56:18.074 (   0.000s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'rewind-viewer.log', mode: 'w', verbosity: 0
-2025-04-04 09:56:18.074 (   0.000s) [main thread     ]               main.cpp:83    INFO| Load configuration from rewind-viewer.yaml
-2025-04-04 09:56:18.074 (   0.000s) [main thread     ]               config.h:412   INFO| Loading configuration from file rewind-viewer.yaml
-2025-04-04 09:56:18.075 (   0.001s) [main thread     ]               main.cpp:92    INFO| Initialize GLFW
-2025-04-04 09:56:18.137 (   0.064s) [main thread     ]               main.cpp:98    INFO| Create main window
-2025-04-04 09:56:18.180 (   0.106s) [main thread     ]               main.cpp:61    INFO| Enable vsync
-2025-04-04 09:56:18.180 (   0.106s) [main thread     ]               main.cpp:64    INFO| Setup Dear ImGui context
-2025-04-04 09:56:18.180 (   0.106s) [main thread     ]               main.cpp:68    INFO| Setup Platform/Renderer backends
-2025-04-04 09:56:18.183 (   0.109s) [main thread     ]               main.cpp:105   INFO| Load OpenGL functions
-2025-04-04 09:56:18.200 (   0.126s) [main thread     ]               main.cpp:111   INFO| OpenGL 4.1 Metal - 89.3, GLSL 4.10
-2025-04-04 09:56:18.200 (   0.126s) [main thread     ]               main.cpp:112   INFO| Driver Apple, Renderer Apple M1 Pro
-2025-04-04 09:56:18.200 (   0.126s) [main thread     ]             shader.cpp:90    INFO| Start compiling shader : vertex=resources/shaders/color_pass_projection.vert, fragment=resources/shaders/color_pass.frag
-2025-04-04 09:56:18.200 (   0.126s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
-2025-04-04 09:56:18.200 (   0.127s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
-2025-04-04 09:56:18.201 (   0.127s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
-2025-04-04 09:56:18.201 (   0.128s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
-2025-04-04 09:56:18.201 (   0.128s) [main thread     ]             shader.cpp:111   INFO| Link shader program
-2025-04-04 09:56:18.202 (   0.128s) [main thread     ]             shader.cpp:88    INFO| Start compiling shader: vertex=resources/shaders/color_circle.vert, fragment=resources/shaders/color_circle.frag, geometry=resources/shaders/color_circle.geom
-2025-04-04 09:56:18.202 (   0.128s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
-2025-04-04 09:56:18.202 (   0.128s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
-2025-04-04 09:56:18.202 (   0.128s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
-2025-04-04 09:56:18.202 (   0.129s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
-2025-04-04 09:56:18.203 (   0.129s) [main thread     ]             shader.cpp:105   INFO| Load Geometry shader
-2025-04-04 09:56:18.203 (   0.129s) [main thread     ]             shader.cpp:107   INFO| Compile Geometry shader
-2025-04-04 09:56:18.204 (   0.130s) [main thread     ]             shader.cpp:111   INFO| Link shader program
-2025-04-04 09:56:18.205 (   0.131s) [main thread     ]             shader.cpp:88    INFO| Start compiling shader: vertex=resources/shaders/uniform_color_circle.vert, fragment=resources/shaders/uniform_color_circle.frag, geometry=resources/shaders/uniform_color_circle.geom
-2025-04-04 09:56:18.205 (   0.131s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
-2025-04-04 09:56:18.205 (   0.131s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
-2025-04-04 09:56:18.205 (   0.131s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
-2025-04-04 09:56:18.205 (   0.131s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
-2025-04-04 09:56:18.205 (   0.132s) [main thread     ]             shader.cpp:105   INFO| Load Geometry shader
-2025-04-04 09:56:18.206 (   0.132s) [main thread     ]             shader.cpp:107   INFO| Compile Geometry shader
-2025-04-04 09:56:18.207 (   0.133s) [main thread     ]             shader.cpp:111   INFO| Link shader program
-2025-04-04 09:56:18.207 (   0.134s) [main thread     ]             shader.cpp:90    INFO| Start compiling shader : vertex=resources/shaders/model_view_projection.vert, fragment=resources/shaders/uniform_color.frag
-2025-04-04 09:56:18.207 (   0.134s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
-2025-04-04 09:56:18.207 (   0.134s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
-2025-04-04 09:56:18.208 (   0.134s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
-2025-04-04 09:56:18.208 (   0.134s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
-2025-04-04 09:56:18.208 (   0.134s) [main thread     ]             shader.cpp:111   INFO| Link shader program
-2025-04-04 09:56:18.208 (   0.135s) [main thread     ]             shader.cpp:90    INFO| Start compiling shader : vertex=resources/shaders/simple_projection.vert, fragment=resources/shaders/uniform_color.frag
-2025-04-04 09:56:18.208 (   0.135s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
-2025-04-04 09:56:18.208 (   0.135s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
-2025-04-04 09:56:18.209 (   0.135s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
-2025-04-04 09:56:18.209 (   0.135s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
-2025-04-04 09:56:18.209 (   0.135s) [main thread     ]             shader.cpp:111   INFO| Link shader program
-2025-04-04 09:56:18.209 (   0.135s) [main thread     ]           renderer.cpp:26    INFO| Initialize canvas
-2025-04-04 09:56:18.209 (   0.135s) [main thread     ]           renderer.cpp:48    INFO| Create rectangle for future rendering
-2025-04-04 09:56:18.209 (   0.135s) [main thread     ]           renderer.cpp:31    INFO| Create Uniform buffer
-2025-04-04 09:56:18.209 (   0.135s) [main thread     ]           renderer.cpp:39    INFO| Bind Uniform buffer to shaders
-2025-04-04 09:56:18.209 (   0.136s) [main thread     ]         tcp_server.cpp:59    INFO| Start listening on 127.0.0.1:9111
-2025-04-04 09:56:18.209 (   0.136s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 09:56:18.209 (   0.136s) [main thread     ]         tcp_server.cpp:59    INFO| Start listening on 127.0.0.1:9112
-2025-04-04 09:56:18.210 (   0.136s) [         1BF5EC1]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 09:56:26.039 (   7.965s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:38378
-2025-04-04 09:56:46.789 (  28.716s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 09:56:46.790 (  28.716s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 09:56:59.477 (  41.391s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:64747
-2025-04-04 10:01:02.187 ( 284.079s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:01:02.187 ( 284.079s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:01:06.984 ( 288.876s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:15350
-2025-04-04 10:02:15.780 ( 357.671s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:02:15.782 ( 357.673s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:02:20.047 ( 361.938s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:2809
-2025-04-04 10:03:25.278 ( 427.169s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:03:25.279 ( 427.170s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:22:25.132 (1566.987s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:50922
-2025-04-04 10:22:25.134 (1566.990s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:22:25.134 (1566.990s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:22:40.597 (1582.453s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:6891
-2025-04-04 10:22:40.598 (1582.454s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:22:40.598 (1582.454s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:23:05.499 (1607.354s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:14316
-2025-04-04 10:23:05.502 (1607.357s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:23:05.502 (1607.357s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:24:23.060 (1684.915s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:48367
-2025-04-04 10:24:23.064 (1684.918s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:24:23.064 (1684.918s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:25:23.193 (1745.046s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:12274
-2025-04-04 10:25:23.195 (1745.049s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:25:23.195 (1745.049s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:26:21.512 (1803.365s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:17140
-2025-04-04 10:26:21.513 (1803.366s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:26:21.514 (1803.366s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:26:33.382 (1815.235s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:55540
-2025-04-04 10:26:33.407 (1815.259s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:26:33.407 (1815.259s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
-2025-04-04 10:29:34.897 (1996.737s) [         1BF5EC0]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:39164
-2025-04-04 10:29:34.922 (1996.761s) [         1BF5EC0]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
-2025-04-04 10:29:34.922 (1996.762s) [         1BF5EC0]     client_gateway.cpp:68    INFO| Waiting new connection...
+2025-04-04 13:47:34.687 (   0.001s) [main thread     ]             loguru.cpp:841   INFO| Logging to 'rewind-viewer.log', mode: 'w', verbosity: 0
+2025-04-04 13:47:34.687 (   0.001s) [main thread     ]               main.cpp:83    INFO| Load configuration from rewind-viewer.yaml
+2025-04-04 13:47:34.687 (   0.001s) [main thread     ]               config.h:412   INFO| Loading configuration from file rewind-viewer.yaml
+2025-04-04 13:47:34.688 (   0.002s) [main thread     ]               main.cpp:92    INFO| Initialize GLFW
+2025-04-04 13:47:34.790 (   0.104s) [main thread     ]               main.cpp:98    INFO| Create main window
+2025-04-04 13:47:34.857 (   0.171s) [main thread     ]               main.cpp:61    INFO| Enable vsync
+2025-04-04 13:47:34.858 (   0.171s) [main thread     ]               main.cpp:64    INFO| Setup Dear ImGui context
+2025-04-04 13:47:34.859 (   0.173s) [main thread     ]               main.cpp:68    INFO| Setup Platform/Renderer backends
+2025-04-04 13:47:34.862 (   0.176s) [main thread     ]               main.cpp:105   INFO| Load OpenGL functions
+2025-04-04 13:47:34.878 (   0.192s) [main thread     ]               main.cpp:111   INFO| OpenGL 4.1 Metal - 89.3, GLSL 4.10
+2025-04-04 13:47:34.878 (   0.192s) [main thread     ]               main.cpp:112   INFO| Driver Apple, Renderer Apple M1 Pro
+2025-04-04 13:47:34.879 (   0.193s) [main thread     ]             shader.cpp:90    INFO| Start compiling shader : vertex=resources/shaders/color_pass_projection.vert, fragment=resources/shaders/color_pass.frag
+2025-04-04 13:47:34.879 (   0.193s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
+2025-04-04 13:47:34.879 (   0.193s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
+2025-04-04 13:47:34.880 (   0.194s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
+2025-04-04 13:47:34.880 (   0.194s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
+2025-04-04 13:47:34.880 (   0.194s) [main thread     ]             shader.cpp:111   INFO| Link shader program
+2025-04-04 13:47:34.881 (   0.195s) [main thread     ]             shader.cpp:88    INFO| Start compiling shader: vertex=resources/shaders/color_circle.vert, fragment=resources/shaders/color_circle.frag, geometry=resources/shaders/color_circle.geom
+2025-04-04 13:47:34.881 (   0.195s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
+2025-04-04 13:47:34.881 (   0.195s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
+2025-04-04 13:47:34.881 (   0.195s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
+2025-04-04 13:47:34.881 (   0.195s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
+2025-04-04 13:47:34.882 (   0.196s) [main thread     ]             shader.cpp:105   INFO| Load Geometry shader
+2025-04-04 13:47:34.882 (   0.196s) [main thread     ]             shader.cpp:107   INFO| Compile Geometry shader
+2025-04-04 13:47:34.883 (   0.197s) [main thread     ]             shader.cpp:111   INFO| Link shader program
+2025-04-04 13:47:34.884 (   0.198s) [main thread     ]             shader.cpp:88    INFO| Start compiling shader: vertex=resources/shaders/uniform_color_circle.vert, fragment=resources/shaders/uniform_color_circle.frag, geometry=resources/shaders/uniform_color_circle.geom
+2025-04-04 13:47:34.884 (   0.198s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
+2025-04-04 13:47:34.884 (   0.198s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
+2025-04-04 13:47:34.884 (   0.198s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
+2025-04-04 13:47:34.884 (   0.198s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
+2025-04-04 13:47:34.885 (   0.199s) [main thread     ]             shader.cpp:105   INFO| Load Geometry shader
+2025-04-04 13:47:34.885 (   0.199s) [main thread     ]             shader.cpp:107   INFO| Compile Geometry shader
+2025-04-04 13:47:34.886 (   0.200s) [main thread     ]             shader.cpp:111   INFO| Link shader program
+2025-04-04 13:47:34.887 (   0.201s) [main thread     ]             shader.cpp:90    INFO| Start compiling shader : vertex=resources/shaders/model_view_projection.vert, fragment=resources/shaders/uniform_color.frag
+2025-04-04 13:47:34.887 (   0.201s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
+2025-04-04 13:47:34.887 (   0.201s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
+2025-04-04 13:47:34.887 (   0.201s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
+2025-04-04 13:47:34.887 (   0.201s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
+2025-04-04 13:47:34.887 (   0.201s) [main thread     ]             shader.cpp:111   INFO| Link shader program
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]             shader.cpp:90    INFO| Start compiling shader : vertex=resources/shaders/simple_projection.vert, fragment=resources/shaders/uniform_color.frag
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]             shader.cpp:93    INFO| Load Vertex shader
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]             shader.cpp:95    INFO| Compile Vertex shader
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]             shader.cpp:98    INFO| Load Fragment shader
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]             shader.cpp:100   INFO| Compile Fragment shader
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]             shader.cpp:111   INFO| Link shader program
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]           renderer.cpp:26    INFO| Initialize canvas
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]           renderer.cpp:48    INFO| Create rectangle for future rendering
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]           renderer.cpp:31    INFO| Create Uniform buffer
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]           renderer.cpp:39    INFO| Bind Uniform buffer to shaders
+2025-04-04 13:47:34.888 (   0.202s) [main thread     ]         tcp_server.cpp:59    INFO| Start listening on 127.0.0.1:9111
+2025-04-04 13:47:34.889 (   0.202s) [         1C229F9]     client_gateway.cpp:68    INFO| Waiting new connection...
+2025-04-04 13:47:34.889 (   0.202s) [main thread     ]         tcp_server.cpp:59    INFO| Start listening on 127.0.0.1:9112
+2025-04-04 13:47:34.889 (   0.202s) [         1C229FA]     client_gateway.cpp:68    INFO| Waiting new connection...
+2025-04-04 13:47:49.236 (  14.550s) [         1C229F9]         tcp_server.cpp:83    INFO| Got connection from 127.0.0.1:26345
+2025-04-04 13:47:49.285 (  14.599s) [         1C229F9]     client_gateway.cpp:85     ERR| Error reading transport: Can't read bytes: Currently not connected.
+2025-04-04 13:47:49.286 (  14.599s) [         1C229F9]     client_gateway.cpp:68    INFO| Waiting new connection...
+2025-04-04 13:50:59.821 ( 205.133s) [main thread     ]                       :0     FATL| Signal: SIGINT

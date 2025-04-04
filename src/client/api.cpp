@@ -1,9 +1,11 @@
+#include "common/entities.h"
 #include <cpr/cpr.h>
 #include <nlohmann/json.hpp>
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/rotating_file_sink.h>
 
 #include <client/api.h>
+#include <common/random.h>
 
 using json = nlohmann::json;
 using namespace std;
@@ -13,12 +15,12 @@ LocalAPI::LocalAPI() {
         .bricks = {
             {
                 .position = {2, 2},
-                .size = {10, 5}
+                .size = {8, 3}
             }
         },
         .ball = { 
             .position = {1, 1},
-            .speed = {5, 5},
+            .speed = {5, 6},
             .radius = 3, 
         },
         .pad = { 
@@ -51,6 +53,18 @@ CommandResponse LocalAPI::send_command(const Command& c) {
     }
     if (w.ball.position.y < 0 || w.ball.position.y > height) {
         w.ball.speed.y = -w.ball.speed.y;
+    }
+
+    if (randrange(0, 10) == 0) {
+        w.bricks.push_back(
+            Brick{ 
+                .position = { 
+                    (double)randint(0, width),
+                    (double)randint(0, height) 
+                }, 
+                .size = {8, 3} 
+            }
+        );
     }
 
     auto is_colliding = [&](const Brick& b) {

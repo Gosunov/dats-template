@@ -1,10 +1,12 @@
 .DS_Store/
 .cache/
+.vscode/
 
 /logs/
 /build/
 
 /compile_commands.json
 
+/rewind
 /client
 /replayer
